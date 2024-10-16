@@ -7,6 +7,7 @@ type Props = {
   params: { slug: string };
 };
 
+export const revalidate = 30;
 export default async function BlogArticle({ params }: Props) {
   const blog = await getBlog(params.slug);
   return (
